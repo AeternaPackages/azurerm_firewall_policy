@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.firewall_policies : {
       for k2, v2 in coalesce(v1.firewall_policy_rule_collection_groups, {}) :
       "${k1}/${k2}" => merge(v2, {
-        firewall_policy_id = module.firewall_policies.firewall_policies["${k1}"].id
+        firewall_policy_id = module.firewall_policies.firewall_policies_id["${k1}"]
       })
     }
   ]...)
