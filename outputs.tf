@@ -1,4 +1,9 @@
 # --- azurerm_firewall_policy ---
+output "firewall_policies_id" {
+  description = "Map of id values across all firewall_policies, keyed the same as var.firewall_policies"
+  value       = module.firewall_policies.firewall_policies_id
+}
+
 output "firewall_policies_auto_learn_private_ranges_enabled" {
   description = "Map of auto_learn_private_ranges_enabled values across all firewall_policies, keyed the same as var.firewall_policies"
   value       = module.firewall_policies.firewall_policies_auto_learn_private_ranges_enabled
@@ -100,6 +105,11 @@ output "firewall_policies_tls_certificate" {
 }
 
 # --- azurerm_firewall_policy_rule_collection_group ---
+output "firewall_policy_rule_collection_groups_id" {
+  description = "Map of id values across all firewall_policy_rule_collection_groups, keyed the same as var.firewall_policy_rule_collection_groups"
+  value       = module.firewall_policy_rule_collection_groups.firewall_policy_rule_collection_groups_id
+}
+
 output "firewall_policy_rule_collection_groups_application_rule_collection" {
   description = "Map of application_rule_collection values across all firewall_policy_rule_collection_groups, keyed the same as var.firewall_policy_rule_collection_groups"
   value       = module.firewall_policy_rule_collection_groups.firewall_policy_rule_collection_groups_application_rule_collection
