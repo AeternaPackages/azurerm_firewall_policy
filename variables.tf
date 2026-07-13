@@ -37,12 +37,12 @@ EOT
     auto_learn_private_ranges_enabled = optional(bool)
     base_policy_id                    = optional(string)
     private_ip_ranges                 = optional(list(string))
-    sku                               = optional(string) # Default: "Standard"
+    sku                               = optional(string)
     sql_redirect_allowed              = optional(bool)
     tags                              = optional(map(string))
-    threat_intelligence_mode          = optional(string) # Default: "Alert"
+    threat_intelligence_mode          = optional(string)
     dns = optional(object({
-      proxy_enabled = optional(bool) # Default: false
+      proxy_enabled = optional(bool)
       servers       = optional(list(string))
     }))
     explicit_proxy = optional(object({
