@@ -12,12 +12,12 @@ locals {
 }
 
 module "firewall_policies" {
-  source            = "git::https://github.com/AeternaModules/azurerm_firewall_policy.git?ref=v4.80.0"
+  source            = "git::https://github.com/AeternaModules/azurerm_firewall_policy.git?ref=v4.81.0"
   firewall_policies = local.firewall_policies
 }
 
 module "firewall_policy_rule_collection_groups" {
-  source                                 = "git::https://github.com/AeternaModules/azurerm_firewall_policy_rule_collection_group.git?ref=v4.80.0"
+  source                                 = "git::https://github.com/AeternaModules/azurerm_firewall_policy_rule_collection_group.git?ref=v4.81.0"
   firewall_policy_rule_collection_groups = local.firewall_policy_rule_collection_groups
   depends_on                             = [module.firewall_policies]
 }
